@@ -1,6 +1,6 @@
 {
   "name": "electron-mock",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "src/index.ts",
   "repository": "https://github.com/rhy3h/electron-mock.git",
   "author": "rhy3htw@gmail.com",
