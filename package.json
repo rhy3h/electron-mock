@@ -1,10 +1,17 @@
 {
   "name": "electron-mock",
+  "description": "The simplest way to mock Electron",
   "version": "0.1.1",
   "main": "src/index.ts",
   "repository": "https://github.com/rhy3h/electron-mock.git",
   "author": "rhy3htw@gmail.com",
   "license": "MIT",
+  "keywords": [
+    "electron",
+    "vitest",
+    "test",
+    "mock"
+  ],
   "files": [
     "LICENSE",
     "package.json",
