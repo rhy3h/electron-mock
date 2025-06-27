@@ -8,7 +8,7 @@
     "sourceMap": false,
     "inlineSourceMap": false,
     "tsBuildInfoFile": "./node_modules/.cache/tsbuildinfo",
-    "rootDir": "src",
+    "rootDir": ".",
     "experimentalDecorators": true,
     "strict": true,
     "esModuleInterop": true,
