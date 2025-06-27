@@ -4,5 +4,9 @@
   "main": "src/index.ts",
   "repository": "https://github.com/rhy3h/electron-mock.git",
   "author": "rhy3htw@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.0.4",
+    "vitest": "^3.2.4"
+  }
 }
