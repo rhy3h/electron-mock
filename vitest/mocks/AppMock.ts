@@ -7,4 +7,5 @@ export class AppMock extends EventEmitter {
 
   public quit = vi.fn();
   public getVersion = vi.fn();
+  public getPath = vi.fn();
 }
