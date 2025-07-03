@@ -1,3 +1,7 @@
 import { EventEmitter } from 'node:events';
 
-export class IpcMainInvokeEventMock extends EventEmitter {}
+import { WebContentsMock } from './WebContentsMock';
+
+export class IpcMainInvokeEventMock extends EventEmitter {
+  public sender = new WebContentsMock();
+}
