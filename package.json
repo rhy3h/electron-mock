@@ -1,7 +1,7 @@
 {
   "name": "electron-mock",
   "description": "The simplest way to mock Electron",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "main": "src/index.ts",
   "repository": "https://github.com/rhy3h/electron-mock.git",
   "author": "rhy3htw@gmail.com",
