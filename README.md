@@ -58,13 +58,10 @@ describe('ElectronIpcMain', () => {
   it('GET_APP_VERSION', async () => {
     const handler = getHandle(GET_APP_VERSION);
 
-    // Arrange
     mockApp.getVersion.mockReturnValue('1.0.0');
 
-    // Act
     const result = await handler(mockIpcMainInvokeEvent);
 
-    // Assert
     expect(result).toBe('1.0.0');
   });
 });
