@@ -10,9 +10,11 @@ export interface HandlerListener {
 
 export const handleMap = new Map<string, HandlerListener>();
 
-export function setupIpcMainHandleMock() {
+export function mockElectron() {
   vi.mock('electron', () => electronVitestMock);
+}
 
+export function mockIpcMainHandle() {
   vi.spyOn(electronVitestMock.ipcMain, 'handle').mockImplementation(
     (channel: string, listener: HandlerListener) => {
       handleMap.set(channel, listener);
@@ -22,9 +24,24 @@ export function setupIpcMainHandleMock() {
 
 export function getHandle(channel: string) {
   const handler = handleMap.get(channel);
+
   expect(handler).toBeDefined();
 
   return handler;
+}
+
+export function mockIpcRendererInvoke() {
+  vi.spyOn(electronVitestMock.ipcRenderer, 'invoke').mockImplementation(
+    (channel: string, ...args: any[]) => {
+      const handler = getHandle(channel);
+
+      if (!handler) {
+        return;
+      }
+
+      return handler(electronVitestMock.IpcMainInvokeEvent, ...args);
+    },
+  );
 }
 
 export function resetIpcHandleMock() {
