@@ -13,3 +13,12 @@ export const electronVitestMock = {
   IpcMainInvokeEvent: new IpcMainInvokeEventMock(),
   ipcRenderer: new IpcRendererMock(),
 };
+
+export {
+  AppMock,
+  BrowserWindowMock,
+  ContextBridgeMock,
+  IPCMainMock,
+  IpcMainInvokeEventMock,
+  IpcRendererMock,
+};

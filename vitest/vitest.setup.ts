@@ -4,11 +4,11 @@ import { electronVitestMock } from './mocks/electron';
 
 import { IpcMainInvokeEventMock } from './mocks/IpcMainInvokeEventMock';
 
-interface HandlerListener {
+export interface HandlerListener {
   (event: IpcMainInvokeEventMock, ...args: any[]): Promise<any> | any;
 }
 
-const handleMap = new Map<string, HandlerListener>();
+export const handleMap = new Map<string, HandlerListener>();
 
 export function setupIpcMainHandleMock() {
   vi.mock('electron', () => electronVitestMock);
