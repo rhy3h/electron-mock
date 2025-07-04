@@ -8,9 +8,22 @@ A lightweight utility for easily mocking Electron in tests.
 
 ```js
 // vitest.setup.ts
-import { setupIpcMainHandleMock } from 'electron-mock/vitest';
+import { beforeAll, beforeEach } from 'vitest';
 
-setupIpcMainHandleMock();
+import {
+  mockElectron,
+  mockIpcMainHandle,
+  mockIpcRendererInvoke,
+} from 'electron-mock/vitest';
+
+beforeAll(() => {
+  mockElectron();
+  mockIpcMainHandle();
+});
+
+beforeEach(() => {
+  mockIpcRendererInvoke();
+});
 ```
 
 ```js
